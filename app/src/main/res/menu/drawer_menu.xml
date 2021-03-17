@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/login"
+            android:title="Login" />
+        <item
+            android:id="@+id/profile"
+            android:title="Profile" />
+        <item
+            android:id="@+id/nav_populer_cars"
+
+            android:title="Populer Cars" />
+        <item
+            android:id="@+id/nav_car_details"
+            android:title="Car Details"/>
+        <item
+            android:id="@+id/nav_top10_cars"
+            android:title="Top 10 Cars"/>
+
+        <item
+            android:id="@+id/EMI"
+
+            android:title="EMI Calculater" />
+        <item
+            android:id="@+id/JustLaunchedCars"
+
+            android:title="Just Launched Cars" />
+        <item
+            android:id="@+id/news"
+            android:title="Automobile News" />
+        <item
+            android:id="@+id/nav_find_new_cars"
+
+            android:title="Find New Cars" />
+
+
+        <item
+            android:id="@+id/nav_calculate_loan"
+
+            android:title="Calculate Loan" />
+    </group>
+</menu>
+
