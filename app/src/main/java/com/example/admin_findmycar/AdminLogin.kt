@@ -1,10 +1,11 @@
 package com.example.admin_findmycar
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
 import android.widget.Toast
+import androidx.appcompat.app.ActionBar
+import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_admin_login.*
 
@@ -12,6 +13,11 @@ class AdminLogin : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_admin_login)
+
+        //to hide action bar in login
+        val actionBar: ActionBar? = supportActionBar
+        actionBar!!.hide()
+
 
         btn_sign_in.setOnClickListener {
             // if the input field is empty then toast will promted
@@ -36,20 +42,24 @@ class AdminLogin : AppCompatActivity() {
 
                     if(email.equals("findmycar@gmail.com") && password.equals("abc123")){
 
-                        Toast.makeText(
-                            this@AdminLogin,
-                            "You are Logged In succesfully !!",
-                            Toast.LENGTH_SHORT
-                        ).show()
+                        FirebaseAuth.getInstance().signInWithEmailAndPassword(email, password).addOnCompleteListener {
+                            Toast.makeText(
+                                this@AdminLogin,
+                                FirebaseAuth.getInstance().currentUser!!.uid +"You are Logged In succesfully !!",
+                                Toast.LENGTH_SHORT
+                            ).show()
+
+                        }
 
                         val intent =
                             Intent(this@AdminLogin, MainActivity::class.java)
+
                         // while trafering one activity to another, it will create new layer so to remove that unused layer  FLAGE_ACTIVITY_CLEAR_TASK is used
                         intent.flags =
                             Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                         intent.putExtra(
                             "user_id",
-                            FirebaseAuth.getInstance().currentUser!!.uid
+                            "ACN52oMPENYHcegI8ZTD5PxFeko2"
                         )
                         intent.putExtra("email_id", email)
 
@@ -64,44 +74,6 @@ class AdminLogin : AppCompatActivity() {
                         ).show()
 
                     }
-
-
-//                    FirebaseAuth.getInstance().signInWithEmailAndPassword(email, password)
-//                        .addOnCompleteListener(
-//                            { task ->
-//
-//                                if (task.isSuccessful) {
-//
-//                                    //    val firebaseuser: FirebaseUser = task.result!!.user!!
-//
-//                                    Toast.makeText(
-//                                        this@AdminLogin,
-//                                        "You are Logged In succesfully !!",
-//                                        Toast.LENGTH_SHORT
-//                                    ).show()
-//
-//                                    val intent =
-//                                        Intent(this@AdminLogin, MainActivity::class.java)
-//                                    // while trafering one activity to another, it will create new layer so to remove that unused layer  FLAGE_ACTIVITY_CLEAR_TASK is used
-//                                    intent.flags =
-//                                        Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-//                                    intent.putExtra(
-//                                        "user_id",
-//                                        FirebaseAuth.getInstance().currentUser!!.uid
-//                                    )
-//                                    intent.putExtra("email_id", email)
-//
-//                                    startActivity(intent)
-//                                    finish()
-//
-//                                } else {
-//                                    Toast.makeText(
-//                                        this@AdminLogin,
-//                                        task.exception!!.message.toString(),
-//                                        Toast.LENGTH_SHORT
-//                                    ).show()
-//                                }
-//                            })
                 }
             }
         }

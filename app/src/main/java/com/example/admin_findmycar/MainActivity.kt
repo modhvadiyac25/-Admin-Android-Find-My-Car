@@ -44,13 +44,18 @@ class MainActivity : AppCompatActivity() {
                     )
                 }
 
-                R.id.profile -> {
+                R.id.add_car -> {
                     val intent =
                         Intent(this@MainActivity, AddCar::class.java)
 
                     startActivity(intent)
                 }
                 R.id.nav_populer_cars -> {
+//
+                    val intent =
+                        Intent(this@MainActivity, GetAndSetImage::class.java)
+                    startActivity(intent)
+//
 //                    val intent =
 //                        Intent(this@MainActivity, PopularCars::class.java)
 //                    intent.putExtra(
@@ -85,65 +90,65 @@ class MainActivity : AppCompatActivity() {
     }
 
     //UDF function for drawerlayout
-    fun navMenu() {
-        //for drawer layout
-        toggle = ActionBarDrawerToggle(this, drawerlayout, R.string.open, R.string.close)
-        drawerlayout.addDrawerListener(toggle)
-
-        // to connect this toggle with drawer layout
-        toggle.syncState()
-       // tv_email.text = intent.getStringExtra("email_id")
-
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        navigation_view.setNavigationItemSelectedListener {
-            when (it.itemId) {
-
-                R.id.login -> {
-                    startActivity(
-                        Intent(
-                            this@MainActivity,
-                            AdminLogin::class.java
-                        )
-                    )
-                }
-
-                R.id.profile -> {
-                    val intent =
-                        Intent(this@MainActivity, AddCar::class.java)
-
-                    startActivity(intent)
-                }
-                R.id.nav_populer_cars -> {
-//                    val intent =
-//                        Intent(this@MainActivity, PopularCars::class.java)
-//                    intent.putExtra(
-//                        "user_id",
-//                        FirebaseAuth.getInstance().currentUser!!.uid
+//    fun navMenu() {
+//        //for drawer layout
+//        toggle = ActionBarDrawerToggle(this, drawerlayout, R.string.open, R.string.close)
+//        drawerlayout.addDrawerListener(toggle)
+//
+//        // to connect this toggle with drawer layout
+//        toggle.syncState()
+//       // tv_email.text = intent.getStringExtra("email_id")
+//
+//        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+//        navigation_view.setNavigationItemSelectedListener {
+//            when (it.itemId) {
+//
+//                R.id.login -> {
+//                    startActivity(
+//                        Intent(
+//                            this@MainActivity,
+//                            AdminLogin::class.java
+//                        )
 //                    )
-//                    startActivity(intent)
-                }
-
-                R.id.nav_car_details -> {
+//                }
+//
+//                R.id.add_car -> {
 //                    val intent =
-//                        Intent(this@MainActivity, CarDetails::class.java)
-//                    intent.putExtra(
-//                        "user_id",
-//                        FirebaseAuth.getInstance().currentUser!!.uid
-//                    )
+//                        Intent(this@MainActivity, AddCar::class.java)
+//
 //                    startActivity(intent)
-                }
-
-                R.id.EMI -> {
-//                    val intent =
-//                        Intent(this@MainActivity,  CarDetails::class.java)
-//                    intent.putExtra(
-//                        "user_id",
-//                        FirebaseAuth.getInstance().currentUser!!.uid
-//                    )
-//                    startActivity(intent)
-                }
-            }
-            true
-        }
-    }
+//                }
+//                R.id.nav_populer_cars -> {
+////                    val intent =
+////                        Intent(this@MainActivity, PopularCars::class.java)
+////                    intent.putExtra(
+////                        "user_id",
+////                        FirebaseAuth.getInstance().currentUser!!.uid
+////                    )
+////                    startActivity(intent)
+//                }
+//
+//                R.id.nav_car_details -> {
+////                    val intent =
+////                        Intent(this@MainActivity, CarDetails::class.java)
+////                    intent.putExtra(
+////                        "user_id",
+////                        FirebaseAuth.getInstance().currentUser!!.uid
+////                    )
+////                    startActivity(intent)
+//                }
+//
+//                R.id.EMI -> {
+////                    val intent =
+////                        Intent(this@MainActivity,  CarDetails::class.java)
+////                    intent.putExtra(
+////                        "user_id",
+////                        FirebaseAuth.getInstance().currentUser!!.uid
+////                    )
+////                    startActivity(intent)
+//                }
+//            }
+//            true
+//        }
+ //   }
 }

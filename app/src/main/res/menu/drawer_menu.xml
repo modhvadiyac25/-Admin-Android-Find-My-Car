@@ -6,8 +6,8 @@
             android:id="@+id/login"
             android:title="Login" />
         <item
-            android:id="@+id/profile"
-            android:title="Profile" />
+            android:id="@+id/add_car"
+            android:title="Add Car" />
         <item
             android:id="@+id/nav_populer_cars"
 
