@@ -9,6 +9,10 @@
             android:id="@+id/add_car"
             android:title="Add Car" />
         <item
+            android:id="@+id/nav_updatecar"
+
+            android:title="Update Car" />
+        <item
             android:id="@+id/nav_populer_cars"
 
             android:title="Populer Cars" />

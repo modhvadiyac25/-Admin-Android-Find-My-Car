@@ -50,6 +50,20 @@ class MainActivity : AppCompatActivity() {
 
                     startActivity(intent)
                 }
+                R.id.nav_updatecar -> {
+//
+                    val intent =
+                        Intent(this@MainActivity, UpdateCar::class.java)
+                    startActivity(intent)
+//
+//                    val intent =
+//                        Intent(this@MainActivity, PopularCars::class.java)
+//                    intent.putExtra(
+//                        "user_id",
+//                        FirebaseAuth.getInstance().currentUser!!.uid
+//                    )
+//                    startActivity(intent)
+                }
                 R.id.nav_populer_cars -> {
 //
                     val intent =

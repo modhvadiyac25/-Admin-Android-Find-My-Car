@@ -266,7 +266,9 @@ class AddCar : AppCompatActivity() , View.OnClickListener  {
                 car_img.visibility = View.VISIBLE
                 car_img.setImageBitmap(bitmap)
                 uploadFile()
-            }catch (e: IOException){
+            }
+            catch (e: IOException)
+            {
                 e.printStackTrace()
             }
         }
