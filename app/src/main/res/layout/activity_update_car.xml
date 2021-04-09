@@ -502,20 +502,20 @@
                 android:textSize="15dp"
                 />
             <Button
-                android:id="@+id/btnchoose"
+                android:id="@+id/update_btnchoose"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Choose File"
                 />
             <Button
-                android:id="@+id/btn_addCar"
+                android:id="@+id/btn_UpdateCar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
                 android:backgroundTint="@color/black"
                 android:fontFamily="@font/bold"
-                android:text="Add Car"
+                android:text="Update Car"
                 android:textColor="@color/white" />
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView"

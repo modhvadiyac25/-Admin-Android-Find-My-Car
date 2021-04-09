@@ -49,6 +49,11 @@ class MainActivity : AppCompatActivity() {
                         Intent(this@MainActivity, AddCar::class.java)
 
                     startActivity(intent)
+                }R.id.logout -> {
+                    val intent =
+                        Intent(this@MainActivity, AddCar::class.java)
+
+                    startActivity(intent)
                 }
                 R.id.nav_updatecar -> {
 //
