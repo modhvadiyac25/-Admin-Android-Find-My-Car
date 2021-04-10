@@ -13,6 +13,10 @@
 
             android:title="Update Car" />
         <item
+            android:id="@+id/nav_deletecar"
+
+            android:title="Update Car" />
+        <item
             android:id="@+id/logout"
 
             android:title="LogOut" />
