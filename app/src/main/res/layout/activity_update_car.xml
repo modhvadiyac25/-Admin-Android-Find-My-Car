@@ -2,9 +2,9 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    tools:context=".AddCar">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UpdateCar">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,8 +18,21 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:fontFamily="@font/bold"
-            android:text="Add Car"
+            android:text="Update Car"
             android:textSize="46sp" />
+
+        <SearchView
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:background="@drawable/custom_background_searchbar"
+            android:layout_height="wrap_content" >
+
+        </SearchView>
+
+        <ListView
+            android:id="@+id/list_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -27,7 +40,6 @@
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
             android:orientation="vertical">
-
 
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -490,20 +502,20 @@
                 android:textSize="15dp"
                 />
             <Button
-                android:id="@+id/btnchoose"
+                android:id="@+id/update_btnchoose"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Choose File"
                 />
             <Button
-                android:id="@+id/btn_addCar"
+                android:id="@+id/btn_UpdateCar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
                 android:backgroundTint="@color/black"
                 android:fontFamily="@font/bold"
-                android:text="Add Car"
+                android:text="Update Car"
                 android:textColor="@color/white" />
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView"
@@ -533,4 +545,5 @@
             <!--                android:layout_margin="5dp"/>-->
         </LinearLayout>
     </LinearLayout>
+
 </ScrollView>

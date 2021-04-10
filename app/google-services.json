@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "360491916380",
+    "firebase_url": "https://findmycar-6b24a-default-rtdb.firebaseio.com",
+    "project_id": "findmycar-6b24a",
+    "storage_bucket": "findmycar-6b24a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:360491916380:android:5c058c9063801721805a99",
+        "android_client_info": {
+          "package_name": "com.example.admin_findmycar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "360491916380-6e2c8a5jk8qpf8puvj4ltv04ak45c9om.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCcOIlacx0SmKsJLt2A3iV_XHr-nzSWMiQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "360491916380-6e2c8a5jk8qpf8puvj4ltv04ak45c9om.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:360491916380:android:ececcccdae19e6dd805a99",
+        "android_client_info": {
+          "package_name": "com.example.findmycar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "360491916380-6e2c8a5jk8qpf8puvj4ltv04ak45c9om.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCcOIlacx0SmKsJLt2A3iV_XHr-nzSWMiQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "360491916380-6e2c8a5jk8qpf8puvj4ltv04ak45c9om.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
