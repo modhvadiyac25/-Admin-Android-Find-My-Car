@@ -239,7 +239,7 @@ class AddCar : AppCompatActivity() , View.OnClickListener  {
                         UriTask.result?.let {
                             imageUri = it
                             ImageUrl = imageUri.toString()
-                            Toast.makeText(this,imageUri.toString(),Toast.LENGTH_LONG).show()
+                           // Toast.makeText(this,imageUri.toString(),Toast.LENGTH_LONG).show()
                         }
 
                     }

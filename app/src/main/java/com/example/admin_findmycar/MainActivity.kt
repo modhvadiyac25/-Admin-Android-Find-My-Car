@@ -56,6 +56,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                         Intent(this@MainActivity, UpdateCar::class.java)
                     startActivity(intent)
                  }
+                R.id.nav_deletecar -> {
+                    val intent =
+                        Intent(this@MainActivity, DeleteCar::class.java)
+                    startActivity(intent)
+                 }
 
             }
             true

@@ -45,7 +45,7 @@ class AdminLogin : AppCompatActivity() {
                         FirebaseAuth.getInstance().signInWithEmailAndPassword(email, password).addOnCompleteListener {
                             Toast.makeText(
                                 this@AdminLogin,
-                                FirebaseAuth.getInstance().currentUser!!.uid +"You are Logged In succesfully !!",
+                                 "You are Logged In succesfully !!",
                                 Toast.LENGTH_SHORT
                             ).show()
 

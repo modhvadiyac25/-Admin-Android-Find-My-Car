@@ -311,8 +311,8 @@ class UpdateCar : AppCompatActivity(), View.OnClickListener  {
         showFileChooser()
     }
 
-
-    private fun uploadFile() {
+    private fun uploadFile()
+    {
         if(filePath != null){
             val progressDialog = ProgressDialog(this)
             progressDialog.setTitle("Uploading...")
