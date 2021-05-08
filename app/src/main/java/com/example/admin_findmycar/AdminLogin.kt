@@ -1,11 +1,15 @@
 package com.example.admin_findmycar
 
+import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
+import android.util.Patterns
+import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AlertDialog
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_admin_login.*
 
@@ -40,7 +44,7 @@ class AdminLogin : AppCompatActivity() {
                     val email: String = email.text.toString().trim() { it <= ' ' }
                     val password: String = password.text.toString().trim() { it <= ' ' }
 
-                    if(email.equals("findmycar@gmail.com") && password.equals("abc123")){
+                    if(email.equals("findmycar2021@gmail.com") && password.equals("abc123")){
 
                         FirebaseAuth.getInstance().signInWithEmailAndPassword(email, password).addOnCompleteListener {
                             Toast.makeText(
@@ -78,5 +82,44 @@ class AdminLogin : AppCompatActivity() {
             }
         }
 
+//        btn_forgot_pass.setOnClickListener {
+//
+//            val builder: AlertDialog.Builder = AlertDialog.Builder(this)
+//            builder.setTitle("Forgot Password")
+//            val view = layoutInflater.inflate(R.layout.dialig_forget_password, null)
+//            builder.setView(view)
+//            val username =  view.findViewById<EditText>(R.id.et_username)
+//
+//            builder.setPositiveButton("Reset", DialogInterface.OnClickListener { _, _ ->
+//                forgotPassword(username)
+//            })
+//            builder.setNegativeButton("Close", DialogInterface.OnClickListener { _, _ ->
+//
+//            })
+//            builder.show()
+//        }
+
     }
+
+//    fun forgotPassword(username: EditText) {
+//
+//        var email = username.text.toString().trim()
+//        if (email.isEmpty()) { //username.text.toString()
+//            return
+//        }
+//        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+//            return
+//        }
+//
+//        FirebaseAuth.getInstance().sendPasswordResetEmail(email)
+//            .addOnCompleteListener { task ->
+//                if (task.isSuccessful) {
+//                    Toast.makeText(this , "Email sent.", Toast.LENGTH_LONG).show()
+//                    // Log.d(TAG, "Email sent.")
+//                }
+//                else{
+//                    Toast.makeText(this ,task.exception.toString(), Toast.LENGTH_LONG).show()
+//                }
+//            }
+//    }
 }
